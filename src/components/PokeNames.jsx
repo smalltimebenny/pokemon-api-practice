@@ -5,7 +5,7 @@ const PokeNames = () => {
 
     useEffect (() => {
         console.log("Names componenent loaded.")
-        fetch ("https://pokeapi.co/api/v2/pokemon/")
+        fetch ("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
             .then(response => {return response.json()})
             .then(response => {setMoniker({name: response.results})})
     }, []);
